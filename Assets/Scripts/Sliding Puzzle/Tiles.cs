@@ -33,7 +33,7 @@ public class Tiles : MonoBehaviour
         }
         else
         {
-            //sprite.color = Color.white;
+            sprite.color = Color.white;
             inRightPlace = false;
         }
     }
