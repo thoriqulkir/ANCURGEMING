@@ -21,6 +21,26 @@ public class Masukpintu : MonoBehaviour
             scenetoload = "Kamartidur2";
             bolehmasuk = true;  
         }
+        else if (col.GetComponent<PintuKamarmandi>())
+        {
+            scenetoload = "Ruangtengah2";
+            bolehmasuk = true;
+        }
+        else if (col.GetComponent<PintuTengah2>())
+        {
+            scenetoload = "Kamarmandi";
+            bolehmasuk = true;
+        }
+        else if (col.GetComponent<PintuRumah>())
+        {
+            scenetoload = "Ruangtengah3";
+            bolehmasuk = true;
+        }
+        else if (col.GetComponent<PintuTengah3>())
+        {
+            scenetoload = "Perumahan";
+            bolehmasuk = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D col) 
     {
