@@ -33,4 +33,9 @@ public class PuzzleManager : MonoBehaviour
             Debug.Log("PUZZLE COMPLETED!");
         }
     }
+
+    public void wrongMove()
+    {
+        correctedPipes -= 1;
+    }
 }

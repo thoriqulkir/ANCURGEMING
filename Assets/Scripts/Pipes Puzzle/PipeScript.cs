@@ -47,7 +47,8 @@ public class PipeScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        transform.Rotate(new Vector3(0, 0, 90));
+        transform.Rotate(0, 0, 90);
+        transform.eulerAngles = new Vector3(0, 0, Mathf.Round(transform.eulerAngles.z));
 
         if (possibleRotation > 1)
         {
@@ -60,6 +61,7 @@ public class PipeScript : MonoBehaviour
             else if (isPlaced == true)
             {
                 isPlaced = false;
+                gameManager.wrongMove();
             }
         }
         else
@@ -72,6 +74,7 @@ public class PipeScript : MonoBehaviour
             else if (isPlaced == true)
             {
                 isPlaced = false;
+                gameManager.wrongMove();
             }
         }
     }
